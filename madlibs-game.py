@@ -1,0 +1,21 @@
+#madlibs game
+print("Welcome to the Mad Libs Adventure! Fill in the blanks with your creativity to create a funny story.\n")
+
+adjective1 = input("Enter an adjective: ")
+noun1 = input("Enter a noun: ")
+verb1 = input("Enter a verb: ")
+place = input("Enter a place: ")
+noun2 = input("Enter another noun: ")
+animal1 = input("Enter an animal: ")
+noun3 = input("Enter another noun: ")
+noun4 = input("Enter a body part: ")
+adjective = input("Enter another adjective: ")
+noun5 = input("Enter another noun: ")
+exclamation = input("Enter an exclamation: ")
+noun6 = input("Enter a final noun: ")
+
+print(f"Once upon a time, a {adjective1} {noun1} decided to {verb1} in the middle of a (place).")
+print(f'Everyone screamed, "Oh no, not the {noun2} again!"')
+print(f"But the {animal1} just smiled and pulled out a {noun3}from its {noun4}.")
+print(f'Suddenly, a {adjective}{noun5} appeared, shouting, "{exclamation}!"')
+print(f"And that’s how the world’s first {noun6} was created.")
