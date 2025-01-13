@@ -41,7 +41,6 @@
 # # add, remove, pop - remove the first random element, clear
 
 # # tuple(): ordered and unchangable. duplicates ok, faster
-# #set{}: unordered and immutable, add/remove ok, but no duplicates
 # fruits = ("apple", "banana", "orange") 
 # print(fruits) # ('apple', 'banana', 'orange')
 # # dir(fruits) #list of attributes and methods
@@ -75,6 +74,28 @@
 #     # potato tomato
 #     # chicken beef fish turkey
  
+
+# # dictionary = a collection of {key:value} pairs. Ordered and changeable. No duplicates
+
+# capitals = {"USA":"Washington D. C.", 
+#             "India":"New Delhi",
+#             "Belarus":"Minsk"}
+# # dir/help(capitals)
+# if capitals.get("USA"):
+#     print("That capital exists. ")
+# else:
+#     print("That capital does not exist. ")
+
+# capitals.update({"Germany":"Frankfurt"}) #adds to the end
+# capitals.update({"Germany":"Berlin"}) #works fine
+# capitals.pop("India")
+# capitals.popitem() #remove the latest that was inserted - Germany
+# # capitals.clear() #clear the whole dictionary
+# capitals.keys() #retun keys -> dict_keys(['USA', 'Belarus'])
+# capitals.values() #return values -> dict_values(['Washington D. C.', 'Minsk'])
+# capitals.items() #return 2dlist of tuple [(),()]
+
+
 
 
 # #Typecusting - the process of converting a variable from one type to anither str(), int(), float(), bool()
