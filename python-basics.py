@@ -2,17 +2,82 @@
 # print("Hi")
 # print("It's really good!")
 
+
 # # Variables
 # first_name ="Jessica" #string
 # age = 25 #integer
 # price = 10.498 #float
 # status = False #boolean (or True)
 
-
-# print(first_name)
 # print(f"Hello {first_name}") #f-string formating
+##print is automathicly as a println, to errase \n we can print(first_name, end =" ") - spece insead of \n
 
-# #Typecusting - the process of cinverting a variable from one type to anither str(), int(), float(), bool()
+# #collection = single "variable" used to store multiple variables
+
+# #list[]: ordered, changeable, duplicates are ok
+# fruits = ["apple", "banana", "orange"] #printed as ['apple','banana','orange']
+# print(fruits)
+# # dir(fruits) #list of attributes and methods
+# # help(fruits) #list of attributes and methods with the description
+# print("apple" in fruits) #boolean
+# fruits[1] ="pineapple" # ["apple", "pineapple", "orange"]
+# fruits.index("pineapple") #1
+# fruits.count("pineapple") #1
+# fruits.append("coconut") # ["apple", "pineapple", "orange", "coconut"] as [0,1,2,3]
+# fruits.remove("apple") # ["pineapple", "orange", "coconut"] as [0,1,2]
+# fruits.insert(2, "pear") # ["pineapple", "orange", "pear", "coconut"] as [0,1,2,3]
+# fruits.sort() #return none
+# print(fruits) # ['coconut', 'orange', 'pear', 'pineapple']
+# fruits.reverse() #return none
+# print(fruits) # ['pineapple', 'pear', 'orange', 'coconut']
+# fruits.clear
+
+# #set{}: unordered and immutable, add/remove ok, but no duplicates
+# fruits = {"apple", "banana", "orange"} 
+# print(fruits) #unordered ['banana', 'apple', 'orange']
+# # dir(fruits) #list of attributes and methods
+# # help(fruits) #list of attributes and methods with the description
+# # print(fruits[0]) will not work is there are no order
+# # add, remove, pop - remove the first random element, clear
+
+# # tuple(): ordered and unchangable. duplicates ok, faster
+# #set{}: unordered and immutable, add/remove ok, but no duplicates
+# fruits = ("apple", "banana", "orange") 
+# print(fruits) # ('apple', 'banana', 'orange')
+# # dir(fruits) #list of attributes and methods
+# # help(fruits) #list of attributes and methods with the description
+# print(fruits[0]) #apple
+# # count, index
+
+
+# # 2dlist =[list1, list2, list3] or ([],{},()) and so on like an excel spreadsheet
+# fruits =     ["apple", "orange", "pineapple"]
+# vegetables = ["potato", "tomato"]
+# meats =      ["chicken", "beef", "fish", "turkey"]
+
+# groceries = [fruits, vegetables, meats]
+# print(groceries) # [['apple', 'orange', 'pineapple'], ['potato', 'tomato'], ['chicken', 'beef', 'fish', 'turkey']]
+# print(groceries[0]) # ['apple', 'orange', 'pineapple']
+# print(groceries[0][1]) # orange
+
+# for collection in groceries:
+#     print(collection)
+#     # ['apple', 'orange', 'pineapple']
+#     # ['potato', 'tomato']
+#     # ['chicken', 'beef', 'fish', 'turkey']
+
+# for collection in groceries:
+#     for food in collection:
+#      print(food, end = " ")   
+#     print()
+#     # output is element by element:
+#     # apple orange pineapple
+#     # potato tomato
+#     # chicken beef fish turkey
+ 
+
+
+# #Typecusting - the process of converting a variable from one type to anither str(), int(), float(), bool()
 # #concatenation. no str into int OR bool always True is it's not null
 
 # print(type(price))
@@ -68,6 +133,49 @@
 # else:
 #     print("Sorry, see you later!")
 
+# # while loop
+# name = input("Enter your name: ")
+# while name =="":
+#     name = input("Enter your name: ")
+# print(f"Hello {name}")
+
+# food = input("Enter ypur favorite food (q to quit): ")
+# while not food =="q":
+#     print(f"You like {food}")
+#     food = input("Enter ypur favorite food (q to quit): ")
+# print("Bye!")
+
+
+# # For Loop. range(), string(), sequence()
+# for x in range(1,11): #11 is exlusive
+#     if x ==9:
+#         continue #skip 9 
+#         #break if we need to break the whole cycle
+#     else:
+#         print(x)
+# #output is 1 2 3 4 5 6 7 8  10
+
+# print("The reversed order with the step 2: ")
+# for x in reversed(range(1,11,2)): 
+#     print(x)
+# #output is 9 7 5 3 1
+
+# print("The reversed order by index for string '38190': ")
+# number = "38190"
+# for x in number[::-1]: #for number not for x
+#     print(x)
+# print(number) # 38190 as we didn't change the number and just gave x all values
+
+# #nested loop. outer loop: 
+# #               inner loop:
+
+# for x in range(3):
+#     for y in range(1,10):
+#         print(y, end =" ") #all numers are at the same line
+#     print()
+
+
+
 # #logical operators
 # #and, or, not
 
@@ -89,19 +197,49 @@
 # max_num = a if a<b else b
 # print(max_num)
 
-# functions and method
-name = "ASApi name number"
-len(name) #10
-    #string
-name.find("n") #6
-name.rfind("n") #11 - last n. -1 if there are no results
-name.capitalize() #Asapi name number
-name.upper() #ASAPI NAME NUMBER
-name.lower() #asapi name number
-name.isdigit() #True or False -> False as not only num
-name.isalpha() #True or False -> False as not only alphabethical (" ")
-name.count(" ") #2
-name.replace(" ", "-") #ASApi-name-number
+# # functions and method
+# name = "ASApi name number"
+# len(name) #10
+#     #string
+# name.find("n") #6
+# name.rfind("n") #11 - last n. -1 if there are no results
+# name.capitalize() #Asapi name number
+# name.upper() #ASAPI NAME NUMBER
+# name.lower() #asapi name number
+# name.isdigit() #True or False -> False as not only num
+# name.isalpha() #True or False -> False as not only alphabethical (" ")
+# name.count(" ") #2
+# name.replace(" ", "-") #ASApi-name-number
 
-#helper
-#print(help(str))
+# #helper
+# #print(help(str))
+
+# #indexing [start:end:step] - string
+# card_number = "123-456-78"
+# print(card_number[1:6:2]) #2-5
+# print(card_number[-2]) #7 as it is a second digit from the end. starts from -1
+# print(card_number[-4:]) #6-78 - as the last 4 digits
+# print(card_number[::-1]) #87-654-321 - skiped the start and end and now we have a step "-1" representing that we're moving backwards 
+
+
+# # format specifiers. value.flags
+# #value:.2f= x.00
+# #value:10 =        x - 10 spaces
+# #value:02 = 00x - 0-paded
+# #value:<5 = x    - left-justified
+# #value:>5 =     x- right-justified
+# #value:^5 =   x  - centred
+# #value:-  = -x  - showing "-", same as + or space for +
+# #value:+  = -x  - showing "+", same as space 
+# #value:, = -x,0  - changing . into a , 
+
+# price1 = 2.14243
+# price2 = -890.90
+# price3 = 12
+# print (f"{price1:+,.2f}\n{price2:+10}\n{price3:>5}")
+# # output:
+# # +2.14
+# #     -890.9
+# #    12
+
+
