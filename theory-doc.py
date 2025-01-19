@@ -1,3 +1,9 @@
+# # import module # as mod
+#  print(help(module))
+# # refer to module: mod.pi
+# # we can create our own module in a separate file
+
+
 # # This is my basic skills
 # print("Hi")
 # print("It's really good!")
@@ -10,7 +16,7 @@
 # status = False #boolean (or True)
 
 # print(f"Hello {first_name}") #f-string formating
-##print is automathicly as a println, to errase \n we can print(first_name, end =" ") - spece insead of \n
+# #print is automathicly as a println, to errase \n we can print(first_name, end =" ") - spece insead of \n
 
 # #collection = single "variable" used to store multiple variables
 
@@ -94,7 +100,7 @@
 # capitals.keys() #retun keys -> dict_keys(['USA', 'Belarus'])
 # capitals.values() #return values -> dict_values(['Washington D. C.', 'Minsk'])
 # capitals.items() #return 2dlist of tuple [(),()]
-
+# capitals.get(1)[0] # return a first value of the first evement 
 
 
 
@@ -264,3 +270,168 @@
 # #    12
 
 
+# #Randomizer
+# import random
+# # help(random)
+
+# random.randint(1,6) #from 1 to 6
+
+# a, b = 1,5
+# random.randint(a, b) #ok if a and b is int
+
+# options = ("rock", "paper", "scissors")
+# random.choice(options)
+
+# MyList = ["2", "3", "A", "Number", "12"]
+# random.shuffle(MyList)
+
+
+###
+# # function = a block of reusable code fun()
+# # the passing order of parametres should be the same
+# def welcoming_function():
+#     print("hey")
+# welcoming_function()
+
+# def welcoming_function_name(name):
+#     print(f"hey {name}")
+# welcoming_function_name("Steve")
+
+# types of arguments for functions : 1. positional 2. default 3. keyword 4. arbitrary
+# def divide(x, y):
+#     z = x / y
+#     return z
+# print(divide(10,3))
+
+# # default arguments 
+# def net_price(list_price, discount = 0, tax = 0.05):
+#     return list_price * (1 - discount) * (1 + tax)
+# print(net_price(500))
+# print(net_price(500,0.2)) # now dicsount = 0.2 instead of default 0
+
+# # keyword arguments - order of arguments doesn't matter
+# def gello(greeting, title, first, last):
+#    print(f" {greeting} {title} {first} {last}")
+
+# #using keywords after assigning without it
+# # if we started wirh a keyword - the following should has keywords as well
+# gello ("Hi","Mr.", last = "Paper",first ="Jonh")
+
+# def get_phone(country, area, first, last):
+#    return f"{country} - {area} - {first} - {last}"
+
+# phone_num = get_phone(country=1, area=123, first=456, last=7890)
+# print(phone_num)
+
+# # arbitrary
+# # *args = multiple non-key - put into tuple(), 
+# # **kwargs = multiple keyword - put onto dictionary[]
+
+# def add(*nums):
+#     total = 0
+#     for num in nums:
+#         total+=arg
+#     return total
+
+# print(add(1,2,3,4))
+# #kwargs
+# def print_address(**kwargs):
+#     for value in kwargs.values():
+#         print(value)
+#     # for key,value in kwargs.items():
+#     #     print(f"Key is {key}: value :{value}")
+
+
+# print_address(street = "North West" , city = "Chicago", country = "Us")
+
+# # Iterables = An object/collection that can return its element 
+# #              one at a time, allowing it to be iterated over in a loop
+
+# numbers =[1,2,3,4,5,6]
+# # string, list, tuple, {}, dictionary are iterable
+
+# for number in numbers:
+# #for number in reversed(numbers):
+#     print(number)
+
+
+# # membership operators = used to test whether a value/variable is found in a sequence
+# #                         (string, list, tuple, set, dictionary)
+# #                         in/ not in
+# word = "APPLE"
+# if "A" in word:
+#     print("The is a letter 'A' in a word")
+# 
+# # if it's a dictionary 
+# dic = {"a": "first", "b": "second", "c": "third"}
+# letter = input()
+# if letter in dic:
+#     print (f"{letter} has a {dic[letter]} number")
+
+
+# # list comprehension - [expression for value in iterable #+if condition]
+# doubles = [x*2 for x in range(1,11)]
+# print(doubles)
+# 
+# fruits = ["apple","orange","banana"] 
+# fruits = [fruit.capitalize() for fruit in fruits]    
+# print(fruits)
+# 
+# # with if condition
+# numbers = [1,3,-5,2,-10]
+# positive_nums = [num for num in numbers if num>=0]
+# even_nums = [num for num in numbers if num == 0]
+
+
+
+# # match-case statement (switch):
+# def day_of_week(day):
+#     match day:
+#         case 1:
+#             return "It's Sunday"
+#         case 2:
+#             return "It's Monday"
+#         case 3:
+#             return "It's Tuesday"
+#         case 4:
+#             return "It's Wendesday"
+#         case _:
+#             return "There is no matching case"
+        
+# print(day_of_week(3))
+
+# # using or in case switch
+# def is_weekend(day):
+#     match day:
+#         case "Sunday" | "Saturday":
+#             return True
+#         case "Monday" | "Tuesday" | "Wednesday":
+#             return False
+#         case _:
+#             return False
+        
+# print(is_weekend("Monday"))
+
+# # variable scope = where a variable ia visible and accessible
+# # scope resolution = (LEGB) Local -> Enclosed -> Global -> Built-in. local is using first and so on
+
+# # a is local for this functions
+# def fun1():
+#     a = 1
+#     print(a)
+# def fun2():
+#     # a is local for this function, 
+#     # but it's different from a fun1
+#     a = 2
+#     print(a)
+
+# fun1()
+# fun2()
+
+# # Enclosed were function in function
+# # Global is outside of any function
+# x = 3
+# print(x)
+# # built-in
+# from math import e
+# print(e)
