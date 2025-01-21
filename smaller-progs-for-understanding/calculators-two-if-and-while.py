@@ -56,4 +56,4 @@ while time <= 0:
         time = float(input("Time should be more than zero: "))
 
 total = principle * pow((1 + rate / 100),time)
-print(f"BALANCE AFTER {time} year/s: ${total:.2f}")
+print(f"Balance after {time} year/s is ${total:.2f}")
